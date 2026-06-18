@@ -1,0 +1,2314 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Gabe Ng Yen Wai - SEO Manager 与 GEO Specialist，专注技术 SEO、生成式引擎优化、AI Automation、Web3 与多语言国际化 SEO。">
+  <meta name="keywords" content="Gabe Ng Yen Wai, SEO Manager, GEO Specialist, 技术 SEO, 生成式引擎优化, AI SEO, Web3 SEO, 加密货币 SEO">
+  <meta name="author" content="Gabe Ng Yen Wai">
+  <title>Gabe Ng Yen Wai | SEO Manager & GEO Specialist</title>
+  <style>
+    :root {
+      --ink: #11131b;
+      --muted: #5e6270;
+      --paper: #f6f4ef;
+      --white: #ffffff;
+      --lime: #d8ff4f;
+      --violet: #ae6cff;
+      --coral: #ff7761;
+      --cyan: #57d4ff;
+      --mint: #78efb0;
+      --line: #1b1c24;
+      --shadow: 0 8px 0 #11131b;
+      --soft-shadow: 0 14px 34px rgba(17, 19, 27, .12);
+      --radius: 22px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        linear-gradient(90deg, rgba(17, 19, 27, .045) 1px, transparent 1px) 0 0 / 44px 44px,
+        linear-gradient(180deg, #fbfaf6 0%, #f6f4ef 48%, #edf9f1 100%);
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 10% 16%, rgba(216, 255, 79, .38) 0 130px, transparent 132px),
+        radial-gradient(circle at 92% 14%, rgba(174, 108, 255, .24) 0 150px, transparent 152px),
+        radial-gradient(circle at 76% 78%, rgba(87, 212, 255, .22) 0 160px, transparent 162px);
+      z-index: -1;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .skip-link {
+      position: fixed;
+      left: 18px;
+      top: 12px;
+      z-index: 20;
+      transform: translateY(-160%);
+      padding: 10px 14px;
+      border: 2px solid var(--line);
+      border-radius: 999px;
+      background: var(--lime);
+      font-weight: 800;
+      transition: transform .2s ease;
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      padding: 18px clamp(16px, 4vw, 48px);
+      backdrop-filter: blur(18px);
+      background: rgba(246, 244, 239, .78);
+      border-bottom: 1px solid rgba(17, 19, 27, .08);
+    }
+
+    .nav {
+      position: relative;
+      width: min(1180px, 100%);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 950;
+      letter-spacing: 0;
+      white-space: nowrap;
+    }
+
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-items: center;
+      border: 2px solid var(--line);
+      border-radius: 14px;
+      background: var(--lime);
+      box-shadow: 0 4px 0 var(--line);
+    }
+
+    .brand-mark svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 6px;
+      border: 2px solid rgba(17, 19, 27, .24);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .72);
+      box-shadow: 0 7px 24px rgba(17, 19, 27, .08);
+    }
+
+    .nav-links a {
+      min-height: 38px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 9px 14px;
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 800;
+      transition: background .18s ease, color .18s ease, transform .18s ease;
+      white-space: nowrap;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      background: var(--violet);
+      color: var(--white);
+      transform: translateY(-1px);
+    }
+
+    .language-switch {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+      padding: 4px;
+      border: 2px solid var(--line);
+      border-radius: 999px;
+      background: var(--white);
+      box-shadow: 0 5px 0 var(--line);
+      white-space: nowrap;
+    }
+
+    .language-switch button {
+      min-width: 40px;
+      min-height: 36px;
+      padding: 7px 9px;
+      border: 0;
+      border-radius: 999px;
+      background: transparent;
+      color: var(--muted);
+      font: inherit;
+      font-size: 13px;
+      font-weight: 950;
+      cursor: pointer;
+    }
+
+    .language-switch button.active {
+      background: var(--lime);
+      color: var(--ink);
+    }
+
+    main {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    section {
+      scroll-margin-top: 104px;
+      padding: clamp(54px, 8vw, 96px) 0;
+    }
+
+    main section:not(.hero) {
+      animation: fade-up .6s ease both;
+    }
+
+    .hero {
+      min-height: calc(100vh - 82px);
+      display: grid;
+      align-items: center;
+      grid-template-columns: minmax(0, 1.1fr) minmax(300px, .9fr);
+      gap: clamp(28px, 5vw, 72px);
+      padding-top: clamp(34px, 6vw, 78px);
+      animation: none;
+      transform: none;
+    }
+
+    .hero-intro {
+      animation: fade-up .6s ease both;
+    }
+
+    .eyebrow {
+      width: fit-content;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 13px;
+      border: 2px solid var(--line);
+      border-radius: 999px;
+      background: var(--lime);
+      box-shadow: 0 4px 0 var(--line);
+      font-weight: 950;
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      margin: 22px 0 16px;
+      max-width: 760px;
+      font-size: clamp(46px, 9vw, 104px);
+      line-height: .92;
+      letter-spacing: 0;
+      text-wrap: balance;
+    }
+
+    .hero-greeting {
+      display: inline-block;
+      margin-bottom: .12em;
+      font-size: clamp(32px, 5vw, 58px);
+      line-height: 1;
+      color: #292c38;
+    }
+
+    .name-highlight {
+      display: inline-block;
+      margin-top: .08em;
+      padding: .04em .12em .11em;
+      border: 3px solid var(--line);
+      border-radius: 20px;
+      background: var(--lime);
+      color: var(--ink);
+      box-shadow: var(--shadow);
+      transform: rotate(-1.5deg);
+    }
+
+    .hero-type-line {
+      display: block;
+      width: min(100%, 11.6ch);
+      min-height: 2.35em;
+      margin-top: .22em;
+      color: var(--violet);
+      font-size: clamp(32px, 7.8vw, 96px);
+      line-height: 1.05;
+      text-shadow: 3px 3px 0 var(--lime);
+      white-space: normal;
+    }
+
+    .text-type {
+      display: inline;
+      white-space: normal;
+    }
+
+    .text-type__content {
+      display: inline;
+      color: inherit;
+    }
+
+    .text-type__cursor {
+      display: inline-block;
+      margin-left: .1em;
+      color: var(--coral);
+      text-shadow: none;
+      animation: cursor-blink .72s ease-in-out infinite;
+    }
+
+    .text-type__cursor--hidden {
+      opacity: 0;
+    }
+
+    .hero-copy {
+      max-width: 700px;
+      margin: 0 0 24px;
+      color: #2e313b;
+      font-size: clamp(17px, 2vw, 22px);
+      line-height: 1.72;
+      font-weight: 650;
+    }
+
+    .hero-actions,
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 13px 20px;
+      border: 2px solid var(--line);
+      border-radius: 999px;
+      background: var(--ink);
+      color: var(--white);
+      box-shadow: 0 6px 0 var(--line);
+      font-weight: 950;
+      transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+    }
+
+    .button:hover {
+      transform: translateY(3px);
+      box-shadow: 0 2px 0 var(--line);
+      background: #282b38;
+    }
+
+    .button.secondary {
+      background: var(--white);
+      color: var(--ink);
+    }
+
+    .brand-icon {
+      display: inline-grid;
+      flex: 0 0 28px;
+      width: 28px;
+      height: 28px;
+      place-items: center;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .brand-icon svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .hero-card {
+      position: relative;
+      align-self: center;
+      min-height: 560px;
+      border: 3px solid var(--line);
+      border-radius: 36px;
+      background:
+        linear-gradient(135deg, rgba(216, 255, 79, .96), rgba(120, 239, 176, .82) 58%, rgba(87, 212, 255, .62));
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      isolation: isolate;
+      animation: none;
+      transform: none;
+    }
+
+    .hero-card::before,
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      border: 3px solid var(--line);
+      background: var(--white);
+      z-index: 1;
+    }
+
+    .hero-card::before {
+      width: 132px;
+      height: 86px;
+      left: 28px;
+      top: 36px;
+      border-radius: 18px;
+      transform: rotate(-7deg);
+      box-shadow: 0 5px 0 var(--line);
+    }
+
+    .hero-card::after {
+      width: 120px;
+      height: 120px;
+      right: 22px;
+      top: 36px;
+      border-radius: 50%;
+      background: var(--violet);
+      clip-path: polygon(50% 0, 62% 34%, 99% 34%, 68% 56%, 80% 92%, 50% 70%, 20% 92%, 32% 56%, 1% 34%, 38% 34%);
+    }
+
+    .avatar-wrap {
+      position: absolute;
+      inset: auto 30px 30px;
+      z-index: 2;
+      display: grid;
+      grid-template-rows: 1fr auto;
+      min-height: 500px;
+      border: 3px solid var(--line);
+      border-radius: 30px;
+      background: rgba(255, 255, 255, .75);
+      overflow: hidden;
+      box-shadow: 0 8px 0 var(--line);
+    }
+
+    .avatar-placeholder {
+      position: relative;
+      min-height: 390px;
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, .6), rgba(255, 255, 255, .08)),
+        repeating-linear-gradient(-45deg, rgba(17, 19, 27, .08) 0 10px, transparent 10px 22px);
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+    }
+
+    .avatar-placeholder::before {
+      content: "G";
+      width: 140px;
+      height: 140px;
+      display: grid;
+      place-items: center;
+      border: 3px solid var(--line);
+      border-radius: 50%;
+      background: var(--white);
+      color: var(--violet);
+      font-size: 72px;
+      font-weight: 950;
+      box-shadow: 0 7px 0 var(--line);
+    }
+
+    .avatar-placeholder.has-image::before {
+      display: none;
+    }
+
+    .avatar {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transform: none;
+      transition: opacity .35s ease;
+    }
+
+    .avatar.is-loaded {
+      opacity: 1;
+      transform: none;
+    }
+
+    .hero-caption {
+      display: grid;
+      gap: 6px;
+      padding: 20px;
+      border-top: 3px solid var(--line);
+      background: var(--white);
+    }
+
+    .hero-caption strong {
+      font-size: 22px;
+    }
+
+    .hero-caption span {
+      color: var(--muted);
+      font-weight: 760;
+    }
+
+    .mini-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .mini-stat {
+      min-height: 96px;
+      padding: 16px;
+      border: 2px solid var(--line);
+      border-radius: 18px;
+      background: var(--white);
+      box-shadow: 0 5px 0 var(--line);
+    }
+
+    .mini-stat strong {
+      display: block;
+      font-size: clamp(24px, 4vw, 34px);
+      line-height: 1;
+    }
+
+    .mini-stat span {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 850;
+      line-height: 1.35;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 26px;
+    }
+
+    .section-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 950;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 1;
+      letter-spacing: 0;
+      text-wrap: balance;
+    }
+
+    .section-note {
+      max-width: 440px;
+      margin: 0;
+      color: var(--muted);
+      font-weight: 720;
+      line-height: 1.65;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .panel {
+      border: 3px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, .86);
+      box-shadow: var(--soft-shadow);
+    }
+
+    .story {
+      padding: clamp(22px, 4vw, 38px);
+    }
+
+    .story p {
+      margin: 0;
+      color: #2b2f3a;
+      font-size: clamp(16px, 1.6vw, 19px);
+      line-height: 1.9;
+      font-weight: 650;
+    }
+
+    .story p + p {
+      margin-top: 18px;
+    }
+
+    .quote-card {
+      padding: 26px;
+      background: var(--ink);
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .quote-card::after {
+      content: "";
+      position: absolute;
+      right: -36px;
+      bottom: -32px;
+      width: 150px;
+      height: 150px;
+      border: 3px solid var(--line);
+      border-radius: 28px;
+      background: var(--lime);
+      transform: rotate(14deg);
+    }
+
+    .quote-card strong {
+      position: relative;
+      z-index: 1;
+      display: block;
+      max-width: 300px;
+      font-size: 26px;
+      line-height: 1.22;
+    }
+
+    .quote-card span {
+      position: relative;
+      z-index: 1;
+      display: block;
+      margin-top: 18px;
+      color: rgba(255, 255, 255, .72);
+      font-weight: 750;
+      line-height: 1.55;
+    }
+
+    .timeline {
+      position: relative;
+      display: grid;
+      gap: 18px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 18px;
+      top: 18px;
+      bottom: 18px;
+      width: 3px;
+      background: var(--line);
+      border-radius: 99px;
+    }
+
+    .role {
+      position: relative;
+      display: grid;
+      grid-template-columns: 36px minmax(0, 1fr);
+      gap: 18px;
+    }
+
+    .role-dot {
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+      border: 3px solid var(--line);
+      border-radius: 50%;
+      background: var(--lime);
+      box-shadow: 0 4px 0 var(--line);
+      z-index: 1;
+      font-weight: 950;
+    }
+
+    .role-card {
+      padding: 22px;
+      border: 3px solid var(--line);
+      border-radius: 20px;
+      background: var(--white);
+      box-shadow: 0 7px 0 var(--line);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .role-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 0 var(--line);
+    }
+
+    .role-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 850;
+    }
+
+    .role-card h3 {
+      margin: 0 0 12px;
+      font-size: clamp(21px, 2.4vw, 28px);
+      line-height: 1.15;
+    }
+
+    .role-card ul,
+    .skill-card ul,
+    .edu-card ul {
+      margin: 0;
+      padding-left: 18px;
+      color: #30333d;
+      line-height: 1.72;
+      font-weight: 620;
+    }
+
+    .role-card li + li,
+    .skill-card li + li,
+    .edu-card li + li {
+      margin-top: 8px;
+    }
+
+    .projects-grid {
+      display: flex;
+      width: 100%;
+      max-width: 100%;
+      gap: 18px;
+      padding: 72px 6px 18px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scroll-snap-type: x proximity;
+      scrollbar-width: none;
+      cursor: grab;
+      user-select: none;
+      touch-action: pan-y;
+      overscroll-behavior-inline: contain;
+    }
+
+    .projects-grid::-webkit-scrollbar {
+      display: none;
+    }
+
+    .projects-grid.is-dragging {
+      cursor: grabbing;
+      scroll-snap-type: none;
+    }
+
+    .flip-card {
+      position: relative;
+      flex: 0 0 clamp(280px, 28vw, 350px);
+      height: 310px;
+      min-height: 310px;
+      perspective: 1100px;
+      scroll-snap-align: start;
+    }
+
+    .flip-card::before {
+      content: "";
+      position: absolute;
+      top: -40px;
+      left: -18px;
+      width: calc(100% + 36px);
+      border-top: 3px solid rgba(17, 19, 27, .42);
+      border-radius: 50%;
+      transform: rotate(var(--rope-tilt, 0deg));
+      transform-origin: center;
+      z-index: 3;
+      pointer-events: none;
+    }
+
+    .flip-card::after {
+      content: "";
+      position: absolute;
+      top: -55px;
+      left: 50%;
+      width: 28px;
+      height: 42px;
+      border: 3px solid var(--line);
+      border-radius: 7px 7px 10px 10px;
+      background:
+        radial-gradient(circle at 50% 9px, var(--white) 0 4px, var(--line) 4.5px 6px, transparent 6.5px),
+        var(--accent, var(--lime));
+      box-shadow: 0 4px 0 rgba(17, 19, 27, .2);
+      transform: translateX(-50%) rotate(var(--clip-tilt, 0deg));
+      z-index: 4;
+      pointer-events: none;
+    }
+
+    .flip-card:nth-child(3n + 1) {
+      --rope-tilt: .5deg;
+      --clip-tilt: -2deg;
+    }
+
+    .flip-card:nth-child(3n + 2) {
+      --rope-tilt: -.5deg;
+      --clip-tilt: 2deg;
+    }
+
+    .flip-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      min-height: 250px;
+      transform-style: preserve-3d;
+      transition: transform .58s cubic-bezier(.2, .8, .2, 1);
+    }
+
+    .flip-card:hover .flip-inner,
+    .flip-card.is-flipped .flip-inner,
+    .flip-card:focus-within .flip-inner {
+      transform: rotateY(180deg);
+    }
+
+    .projects-grid.is-dragging .flip-inner {
+      transform: rotateY(0deg) !important;
+      transition-duration: .2s;
+    }
+
+    .flip-face {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 20px;
+      border: 3px solid var(--line);
+      border-radius: 22px;
+      backface-visibility: hidden;
+      box-shadow: 0 7px 0 var(--line);
+      overflow: hidden;
+    }
+
+    .flip-front {
+      justify-content: center;
+      background: var(--white);
+    }
+
+    .flip-front > div {
+      position: relative;
+      z-index: 1;
+    }
+
+    .flip-front .project-title {
+      max-width: 90%;
+      margin-bottom: 0;
+      font-size: 28px;
+    }
+
+    .flip-front::after {
+      content: "";
+      position: absolute;
+      right: -30px;
+      bottom: -42px;
+      width: 118px;
+      height: 118px;
+      border: 3px solid var(--line);
+      border-radius: 32px;
+      background: var(--accent, var(--lime));
+      transform: rotate(16deg);
+      z-index: 0;
+    }
+
+    .flip-back {
+      pointer-events: none;
+      transform: rotateY(180deg);
+      background: var(--accent, var(--lime));
+      color: var(--ink);
+    }
+
+    .flip-card:hover .flip-front,
+    .flip-card.is-flipped .flip-front,
+    .flip-card:focus-within .flip-front {
+      pointer-events: none;
+    }
+
+    .flip-card:hover .flip-back,
+    .flip-card.is-flipped .flip-back,
+    .flip-card:focus-within .flip-back {
+      pointer-events: auto;
+    }
+
+    .project-index,
+    .project-title,
+    .project-text,
+    .project-chip {
+      position: relative;
+      z-index: 1;
+    }
+
+    .project-index {
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      border: 2px solid var(--line);
+      border-radius: 14px;
+      background: var(--accent, var(--lime));
+      font-weight: 950;
+    }
+
+    .project-title {
+      margin: 20px 0 8px;
+      font-size: 22px;
+      line-height: 1.15;
+    }
+
+    .project-text {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.55;
+      font-weight: 700;
+    }
+
+    .project-chip {
+      width: fit-content;
+      margin-top: 16px;
+      padding: 7px 10px;
+      border: 2px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .7);
+      font-size: 12px;
+      font-weight: 950;
+    }
+
+    .visual-card {
+      min-height: 138px;
+      display: grid;
+      place-items: center;
+      border: 3px solid var(--line);
+      border-radius: 18px;
+      background:
+        linear-gradient(90deg, rgba(255,255,255,.62) 1px, transparent 1px) 0 0 / 18px 18px,
+        linear-gradient(180deg, rgba(255,255,255,.52), rgba(255,255,255,.12));
+      box-shadow: inset 0 -8px 0 rgba(17, 19, 27, .11);
+    }
+
+    .visual-card svg {
+      width: 104px;
+      height: 104px;
+      filter: drop-shadow(0 4px 0 rgba(17, 19, 27, .32));
+    }
+
+    .visual-card img {
+      width: 100%;
+      height: 138px;
+      display: block;
+      border-radius: 14px;
+      object-fit: cover;
+    }
+
+    .visual-card [hidden] {
+      display: none !important;
+    }
+
+    .game-visual {
+      min-height: 190px;
+    }
+
+    .game-visual img {
+      height: 190px;
+      object-fit: contain;
+      background: #fff8ec;
+    }
+
+    .game-zoom {
+      width: 100%;
+      padding: 0;
+      border: 0;
+      border-radius: 14px;
+      background: transparent;
+      cursor: zoom-in;
+    }
+
+    .image-lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background: rgba(17, 19, 27, .88);
+      backdrop-filter: blur(12px);
+    }
+
+    .image-lightbox[hidden] {
+      display: none;
+    }
+
+    .image-lightbox img {
+      max-width: min(92vw, 760px);
+      max-height: 88vh;
+      border: 4px solid var(--white);
+      border-radius: 18px;
+      box-shadow: 0 14px 0 rgba(0, 0, 0, .35);
+      object-fit: contain;
+    }
+
+    .lightbox-close {
+      position: fixed;
+      top: 18px;
+      right: 18px;
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      border: 2px solid var(--white);
+      border-radius: 50%;
+      background: var(--ink);
+      color: var(--white);
+      font-size: 28px;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    .flip-back p {
+      margin: 14px 0 0;
+      color: rgba(17, 19, 27, .76);
+      line-height: 1.55;
+      font-weight: 850;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .skill-card,
+    .edu-card {
+      padding: 24px;
+      border: 3px solid var(--line);
+      border-radius: 22px;
+      background: var(--white);
+      box-shadow: 0 7px 0 var(--line);
+    }
+
+    .skill-card h3,
+    .edu-card h3 {
+      margin: 0 0 14px;
+      font-size: 23px;
+    }
+
+    .skill-tags,
+    .language-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 9px 11px;
+      border: 2px solid var(--line);
+      border-radius: 999px;
+      background: var(--paper);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .language-tag {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+      min-width: 150px;
+    }
+
+    .language-stars {
+      display: inline-flex;
+      gap: 2px;
+      font-size: 16px;
+      line-height: 1;
+      letter-spacing: 0;
+    }
+
+    .language-stars .filled {
+      color: #f2a900;
+    }
+
+    .language-stars .empty {
+      color: #c7cad2;
+    }
+
+    .edu-wrap {
+      display: grid;
+      grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+      gap: 18px;
+    }
+
+    .edu-card.featured {
+      background: var(--lime);
+    }
+
+    .contact-panel {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+      gap: 20px;
+      align-items: stretch;
+      padding: clamp(24px, 5vw, 44px);
+      border: 3px solid var(--line);
+      border-radius: 30px;
+      background: var(--ink);
+      color: var(--white);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .contact-panel::after {
+      content: "";
+      position: absolute;
+      right: -50px;
+      top: -60px;
+      width: 190px;
+      height: 190px;
+      border: 3px solid var(--line);
+      background: var(--coral);
+      transform: rotate(14deg);
+      border-radius: 36px;
+    }
+
+    .contact-panel h2,
+    .contact-panel p,
+    .contact-list,
+    .contact-actions {
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact-panel p {
+      max-width: 680px;
+      color: rgba(255, 255, 255, .74);
+      font-size: 18px;
+      line-height: 1.75;
+      font-weight: 650;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 12px;
+      align-content: center;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      padding: 14px;
+      border: 2px solid rgba(255, 255, 255, .28);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, .08);
+      font-weight: 850;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-icon {
+      flex: 0 0 auto;
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border: 2px solid var(--line);
+      border-radius: 13px;
+      background: var(--lime);
+      color: var(--ink);
+    }
+
+    .contact-panel .button {
+      background: var(--lime);
+      color: var(--ink);
+    }
+
+    .site-footer {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 26px 0 42px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 800;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      border-top: 2px solid rgba(17, 19, 27, .12);
+    }
+
+    @keyframes fade-up {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes cursor-blink {
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+
+      .text-type__cursor {
+        opacity: 1;
+        animation: none;
+      }
+    }
+
+    @media (max-width: 980px) {
+      .site-header {
+        padding: 12px 14px;
+      }
+
+      .nav {
+        width: 100%;
+        min-width: 0;
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        width: 100%;
+        min-width: 0;
+        justify-content: flex-start;
+        gap: 2px;
+        padding: 4px;
+        overflow-x: auto;
+        scrollbar-width: none;
+      }
+
+      .nav-links a {
+        padding: 8px 9px;
+        font-size: 13px;
+      }
+
+      .nav-links::-webkit-scrollbar {
+        display: none;
+      }
+
+      html[lang="zh-CN"] .nav-links {
+        justify-content: center;
+      }
+
+      .language-switch {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+
+      .brand {
+        padding-right: 104px;
+      }
+
+      section {
+        scroll-margin-top: 148px;
+      }
+
+      .hero,
+      .about-grid,
+      .edu-wrap,
+      .contact-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-card {
+        min-height: 520px;
+      }
+
+      .projects-grid {
+        padding-inline: 14px;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 620px) {
+      main,
+      .site-footer {
+        width: min(100% - 24px, 1180px);
+      }
+
+      .name-highlight {
+        border-radius: 14px;
+      }
+
+      .hero-type-line {
+        width: min(100%, 10.4ch);
+        min-height: 2.45em;
+        font-size: clamp(30px, 13vw, 54px);
+      }
+
+      .hero-actions,
+      .contact-actions {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .hero-card {
+        min-height: 430px;
+        border-radius: 26px;
+      }
+
+      .avatar-wrap {
+        inset: auto 16px 16px;
+        min-height: 380px;
+        border-radius: 22px;
+      }
+
+      .avatar-placeholder {
+        min-height: 292px;
+      }
+
+      .mini-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .flip-card {
+        flex-basis: min(84vw, 360px);
+        height: 330px;
+        min-height: 330px;
+      }
+
+      .section-head {
+        align-items: start;
+        flex-direction: column;
+      }
+
+      .timeline::before {
+        left: 15px;
+      }
+
+      .role {
+        grid-template-columns: 30px minmax(0, 1fr);
+        gap: 13px;
+      }
+
+      .role-dot {
+        width: 30px;
+        height: 30px;
+      }
+
+      .role-card,
+      .skill-card,
+      .edu-card {
+        padding: 18px;
+      }
+
+      .site-footer {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#about">跳到主要内容</a>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="主导航">
+      <a class="brand" href="#top" aria-label="返回首页">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 18V6"></path>
+            <path d="M4 6h7a5 5 0 0 1 0 10H4"></path>
+            <path d="M13 14l7 4"></path>
+            <path d="M17 7l3-3"></path>
+          </svg>
+        </span>
+        Gabe SEO
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#about">关于我</a>
+        <a href="#experience">工作经历</a>
+        <a href="#projects">核心项目</a>
+        <a href="#skills">技能</a>
+        <a href="#education">教育背景</a>
+        <a href="#contact">联系</a>
+      </div>
+      <div class="language-switch" role="group" aria-label="语言切换">
+        <button type="button" class="active" data-language="zh" aria-pressed="true">中</button>
+        <button type="button" data-language="en" aria-pressed="false">EN</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-intro">
+        <span class="eyebrow">SEO Manager · GEO Specialist</span>
+        <h1 id="hero-title">
+          <span class="hero-greeting">Hi, 我是</span><br>
+          <span class="name-highlight">Gabe Ng Yen Wai</span><br>
+          <span class="hero-type-line">
+            <span
+              class="text-type"
+              data-text-type='["SEO Manager", "GEO Specialist", "AI Search Growth"]'
+              data-typing-speed="75"
+              data-deleting-speed="34"
+              data-pause-duration="1500"
+              data-cursor-character="|"
+            ></span>
+          </span>
+        </h1>
+        <p class="hero-copy">
+          4年以上跨行业 SEO 经验，专注加密货币与 Web3 领域；擅长把技术 SEO、产品需求、AI Automation 与 GEO 内容架构串联，提升内容抓取、流量点击以及转化率。
+        </p>
+        <div class="hero-actions">
+          <a class="button" href="#projects">查看核心项目</a>
+          <a class="button secondary" href="#contact">联系我</a>
+        </div>
+        <div class="mini-stats" aria-label="核心成果">
+          <div class="mini-stat">
+            <strong>300%</strong>
+            <span>加密全站自然流量点击提升</span>
+          </div>
+          <div class="mini-stat">
+            <strong>100%</strong>
+            <span>内容页面索引速度提效</span>
+          </div>
+          <div class="mini-stat">
+            <strong>30%</strong>
+            <span>AI LLM Mention 提升</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-card" aria-label="个人照片">
+        <div class="avatar-wrap">
+          <div class="avatar-placeholder" id="avatarShell">
+            <img class="avatar" id="avatarImage" alt="Gabe Ng Yen Wai 个人照片">
+          </div>
+          <div class="hero-caption">
+            <strong>SEO / GEO / AI Search Growth</strong>
+            <span>吉隆坡，马来西亚</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" aria-labelledby="about-title">
+      <div class="section-head">
+        <div>
+          <span class="section-kicker">Profile</span>
+          <h2 id="about-title">关于我</h2>
+        </div>
+      </div>
+      <div class="about-grid">
+        <article class="panel story">
+          <p>
+            我拥有超过4年跨行业 SEO 经验，专注于加密货币与 Web3 领域，成功服务 Phemex、Gate.io 等国际加密平台。擅长技术 SEO 全链路策略制定与落地，覆盖索引管理、爬取效率优化、JavaScript 渲染及 URL 架构设计。
+          </p>
+          <p>
+            近年持续布局生成式引擎优化（GEO），通过 LLM 可见度提升、AI 内容结构优化、Vibe Coding 与 AI Automation，提升关键词研究、内容生产、技术审计与报告效率。
+          </p>
+        </article>
+        <aside class="panel quote-card">
+          <strong>SEO 不只是排名，而是让产品在搜索、AI 答案与用户意图之间被正确理解。</strong>
+          <span>适合高速增长型国际团队，具备 Web3、AI 搜索与多语言市场经验。</span>
+        </aside>
+      </div>
+    </section>
+
+    <section id="experience" aria-labelledby="experience-title">
+      <div class="section-head">
+        <div>
+          <span class="section-kicker">Experience</span>
+          <h2 id="experience-title">工作经历</h2>
+        </div>
+      </div>
+      <div class="timeline">
+        <article class="role">
+          <div class="role-dot">1</div>
+          <div class="role-card">
+            <div class="role-meta"><span>2025年5月 - 至今</span><span>Phemex · 新加坡</span></div>
+            <h3>SEO 经理</h3>
+            <ul>
+              <li>全面负责大型加密平台端到端技术 SEO 策略，覆盖索引管理、爬取效率优化、JavaScript 渲染及 URL 架构设计，自然流量点击提升300%。</li>
+              <li>深度参与产品与工程团队新功能研发，在产品立项阶段嵌入 SEO 需求，确保新产品上线即符合用户搜索意图与市场需求。</li>
+              <li>执行生成式引擎优化（GEO）项目，从内容结构与技术实现双维度推进 LLM 可见度提升，增强品牌在 AI 搜索平台中的引用潜力。</li>
+              <li>运用 AI Automation 与 Vibe Coding 规划落地自动化工具，提升 SEO 工作流程、关键词研究及 AI 内容生产效率。</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="role">
+          <div class="role-dot">2</div>
+          <div class="role-card">
+            <div class="role-meta"><span>2024年9月 - 2025年3月</span><span>Gate.io · 香港</span></div>
+            <h3>SEO 经理</h3>
+            <ul>
+              <li>执行大规模 SEO 优化项目，包含多语言本地化优化，提升多元市场的搜索可见度与用户体验。</li>
+              <li>执行系统性技术 SEO 审计，识别并修复网站问题，确保合规各地区法律法规要求，同步提升网站整体性能表现。</li>
+              <li>与设计师、开发人员及产品团队协作，将 SEO 最佳实践融入网站架构、产品功能及业务 OKR。</li>
+              <li>管理专属外链建设团队，制定并执行战略性链接推广方案，提升域名权威度并改善自然搜索排名。</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="role">
+          <div class="role-dot">3</div>
+          <div class="role-card">
+            <div class="role-meta"><span>2023年1月 - 2024年9月</span><span>Aloha Group · 香港</span></div>
+            <h3>SEO 专员</h3>
+            <ul>
+              <li>执行技术、页面内与页面外全维度综合 SEO 审计，识别改进机会并制定优化方案。</li>
+              <li>综合运用 Google Search Console、Semrush、Screaming Frog 等工具采集与分析 SEO 数据，支撑决策制定。</li>
+              <li>落地 SEO 策略后，3个月内实现搜索流量增长与关键词排名提升超25%。</li>
+              <li>定期执行关键词研究与竞品分析，为博客内容开发提供完整内容大纲计划。</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="role">
+          <div class="role-dot">4</div>
+          <div class="role-card">
+            <div class="role-meta"><span>2021年12月 - 2022年12月</span><span>The Sidekick · 马来西亚</span></div>
+            <h3>SEO 专员</h3>
+            <ul>
+              <li>分析并优化客户网站，为详尽 SEO 策略报告的输出做准备。</li>
+              <li>通过深度关键词研究与精准识别，将自然搜索结果点击率（CTR）提升30%。</li>
+              <li>管理并审计逾30个多元行业客户项目，涵盖电子商务、人力资源、保险及金融服务领域。</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="role">
+          <div class="role-dot">5</div>
+          <div class="role-card">
+            <div class="role-meta"><span>2021年10月 - 2021年12月</span><span>Nexmind Ai Sdn Bhd · 马来西亚</span></div>
+            <h3>搜索引擎优化助理</h3>
+            <ul>
+              <li>协助执行网站 SEO 基础设置、关键词整理与页面优化，支持客户项目报告产出。</li>
+              <li>配合团队检查网站结构、标题标签、元描述与内容相关性，提升搜索表现基础质量。</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="role">
+          <div class="role-dot">6</div>
+          <div class="role-card">
+            <div class="role-meta"><span>2018年9月 - 2021年9月</span><span>Public Mutual Berhad · 马来西亚</span></div>
+            <h3>业务发展主任（培训师）</h3>
+            <ul>
+              <li>协助分行经理推进分支机构业务发展，统筹分行运营，执行销售及招募活动方案。</li>
+              <li>为逾1,400名代理人提供软技能与产品培训及后台支持，提升团队专业素质。</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="role">
+          <div class="role-dot">7</div>
+          <div class="role-card">
+            <div class="role-meta"><span>2017年3月 - 2018年8月</span><span>Unisem Berhad · 马来西亚</span></div>
+            <h3>计划主任</h3>
+            <ul>
+              <li>与生产及工程团队协作，解决物料问题并根据生产优先级灵活调整排程。</li>
+              <li>依据销售预测与产能规划，制定主生产计划（MPS），保障供应链顺畅运转。</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" aria-labelledby="projects-title">
+      <div class="section-head">
+        <div>
+          <span class="section-kicker">Interactive Cards</span>
+          <h2 id="projects-title">核心项目</h2>
+        </div>
+      </div>
+      <div class="projects-grid">
+        <article class="flip-card" tabindex="0" style="--accent: var(--lime)">
+          <div class="flip-inner">
+            <div class="flip-face flip-front">
+              <div>
+                <span class="project-index">01</span>
+                <h3 class="project-title">MCP 自动化连接 TG/飞书</h3>
+              </div>
+            </div>
+            <div class="flip-face flip-back">
+              <div class="visual-card">
+                <svg viewBox="0 0 120 120" fill="none" aria-hidden="true">
+                  <rect x="16" y="22" width="88" height="62" rx="14" fill="#fff" stroke="#11131b" stroke-width="4"></rect>
+                  <path d="M30 44h36M30 60h52M30 76h26" stroke="#11131b" stroke-width="5" stroke-linecap="round"></path>
+                  <path d="M78 30l22 16-22 16z" fill="#ae6cff" stroke="#11131b" stroke-width="4"></path>
+                  <circle cx="88" cy="88" r="14" fill="#d8ff4f" stroke="#11131b" stroke-width="4"></circle>
+                </svg>
+              </div>
+              <p>自动任务，利用 MCP 连接日志以及数据平台，每日自动推送实时数据以及监控异常。</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card" tabindex="0" style="--accent: var(--cyan)">
+          <div class="flip-inner">
+            <div class="flip-face flip-front">
+              <div>
+                <span class="project-index">02</span>
+                <h3 class="project-title">Python Indexing 工具</h3>
+              </div>
+            </div>
+            <div class="flip-face flip-back">
+              <div class="visual-card">
+                <svg viewBox="0 0 120 120" fill="none" aria-hidden="true">
+                  <rect x="18" y="18" width="84" height="84" rx="18" fill="#fff" stroke="#11131b" stroke-width="4"></rect>
+                  <path d="M38 45c0-9 7-15 16-15h19v23H54" stroke="#11131b" stroke-width="5" stroke-linecap="round"></path>
+                  <path d="M82 75c0 9-7 15-16 15H47V67h19" stroke="#11131b" stroke-width="5" stroke-linecap="round"></path>
+                  <circle cx="48" cy="43" r="4" fill="#57d4ff"></circle>
+                  <circle cx="72" cy="77" r="4" fill="#ae6cff"></circle>
+                </svg>
+              </div>
+              <p>利用 Google Indexing API 搭建索引管理与提效工具，提升 70% 内容页面索引率。</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card" tabindex="0" style="--accent: var(--violet)">
+          <div class="flip-inner">
+            <div class="flip-face flip-front">
+              <div>
+                <span class="project-index">03</span>
+                <h3 class="project-title">AI 关键词搭建</h3>
+              </div>
+            </div>
+            <div class="flip-face flip-back">
+              <div class="visual-card">
+                <svg viewBox="0 0 120 120" fill="none" aria-hidden="true">
+                  <circle cx="60" cy="60" r="28" fill="#fff" stroke="#11131b" stroke-width="4"></circle>
+                  <circle cx="28" cy="34" r="12" fill="#d8ff4f" stroke="#11131b" stroke-width="4"></circle>
+                  <circle cx="92" cy="34" r="12" fill="#ff7761" stroke="#11131b" stroke-width="4"></circle>
+                  <circle cx="30" cy="88" r="12" fill="#57d4ff" stroke="#11131b" stroke-width="4"></circle>
+                  <circle cx="90" cy="88" r="12" fill="#78efb0" stroke="#11131b" stroke-width="4"></circle>
+                  <path d="M39 41l15 11M81 41L66 52M41 82l13-14M79 82L66 68" stroke="#11131b" stroke-width="4" stroke-linecap="round"></path>
+                </svg>
+              </div>
+              <p>用 AI Automation 构建搜索关键词体系，辅助内容生产流程。</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card" tabindex="0" style="--accent: var(--coral)">
+          <div class="flip-inner">
+            <div class="flip-face flip-front">
+              <div>
+                <span class="project-index">04</span>
+                <h3 class="project-title">SEO 实战流量增长</h3>
+              </div>
+            </div>
+            <div class="flip-face flip-back">
+              <div class="visual-card">
+                <svg viewBox="0 0 120 120" fill="none" aria-hidden="true">
+                  <rect x="18" y="20" width="84" height="76" rx="14" fill="#fff" stroke="#11131b" stroke-width="4"></rect>
+                  <path d="M32 78l17-18 14 10 24-32" stroke="#11131b" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M77 38h10v10" stroke="#11131b" stroke-width="6" stroke-linecap="round"></path>
+                  <rect x="28" y="88" width="64" height="8" rx="4" fill="#d8ff4f"></rect>
+                </svg>
+              </div>
+              <p>加密交易所日均自然流量提升 300%，最高点达到 500% 提升。</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card" tabindex="0" style="--accent: var(--mint)">
+          <div class="flip-inner">
+            <div class="flip-face flip-front">
+              <div>
+                <span class="project-index">05</span>
+                <h3 class="project-title">GEO 优化</h3>
+              </div>
+            </div>
+            <div class="flip-face flip-back">
+              <div class="visual-card">
+                <svg viewBox="0 0 120 120" fill="none" aria-hidden="true">
+                  <path d="M60 18c20 0 36 16 36 36 0 28-36 48-36 48S24 82 24 54c0-20 16-36 36-36z" fill="#fff" stroke="#11131b" stroke-width="4"></path>
+                  <circle cx="60" cy="54" r="16" fill="#78efb0" stroke="#11131b" stroke-width="4"></circle>
+                  <path d="M48 54h24M60 42v24" stroke="#11131b" stroke-width="4" stroke-linecap="round"></path>
+                </svg>
+              </div>
+              <p>推进生成式引擎优化项目，提升品牌在 AI 搜索平台中的引用潜力。</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card" tabindex="0" style="--accent: var(--lime)">
+          <div class="flip-inner">
+            <div class="flip-face flip-front">
+              <div>
+                <span class="project-index">06</span>
+                <h3 class="project-title">LLM 内容架构优化</h3>
+              </div>
+            </div>
+            <div class="flip-face flip-back">
+              <div class="visual-card">
+                <svg viewBox="0 0 120 120" fill="none" aria-hidden="true">
+                  <rect x="22" y="20" width="76" height="80" rx="14" fill="#fff" stroke="#11131b" stroke-width="4"></rect>
+                  <path d="M38 42h44M38 58h28M38 74h38" stroke="#11131b" stroke-width="5" stroke-linecap="round"></path>
+                  <path d="M82 24v22h16" fill="#d8ff4f" stroke="#11131b" stroke-width="4" stroke-linejoin="round"></path>
+                </svg>
+              </div>
+              <p>优化 LLM 偏好内容结构与关键词规划框架，提升信息架构对齐度。</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card" tabindex="0" style="--accent: var(--cyan)">
+          <div class="flip-inner">
+            <div class="flip-face flip-front">
+              <div>
+                <span class="project-index">07</span>
+                <h3 class="project-title">Vibe Coding 页面</h3>
+              </div>
+            </div>
+            <div class="flip-face flip-back">
+              <div class="visual-card">
+                <svg viewBox="0 0 120 120" fill="none" aria-hidden="true">
+                  <rect x="18" y="24" width="84" height="66" rx="14" fill="#fff" stroke="#11131b" stroke-width="4"></rect>
+                  <path d="M42 48L30 60l12 12M78 48l12 12-12 12M66 42L54 78" stroke="#11131b" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <circle cx="36" cy="34" r="4" fill="#ff7761"></circle>
+                  <circle cx="50" cy="34" r="4" fill="#d8ff4f"></circle>
+                </svg>
+              </div>
+              <p>通过 Vibe Coding 建立关键词数据库，提效内容生产选题速度。</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card" tabindex="0" style="--accent: var(--coral)">
+          <div class="flip-inner">
+            <div class="flip-face flip-front">
+              <div>
+                <span class="project-index">08</span>
+                <h3 class="project-title">AI 手搓小游戏（个人爱好）</h3>
+              </div>
+            </div>
+            <div class="flip-face flip-back">
+              <div class="visual-card game-visual">
+                <button class="game-zoom" id="gameZoomButton" type="button" aria-label="放大游戏项目截图" hidden>
+                  <img id="gameImage" alt="AI 手搓小游戏项目截图">
+                </button>
+                <svg id="gameFallback" viewBox="0 0 120 120" fill="none" aria-hidden="true">
+                  <rect x="18" y="40" width="84" height="42" rx="20" fill="#fff" stroke="#11131b" stroke-width="4"></rect>
+                  <path d="M40 54v16M32 62h16" stroke="#11131b" stroke-width="5" stroke-linecap="round"></path>
+                  <circle cx="78" cy="58" r="5" fill="#ae6cff" stroke="#11131b" stroke-width="3"></circle>
+                  <circle cx="90" cy="68" r="5" fill="#d8ff4f" stroke="#11131b" stroke-width="3"></circle>
+                  <path d="M46 40l-8-18M74 40l8-18" stroke="#11131b" stroke-width="4" stroke-linecap="round"></path>
+                </svg>
+              </div>
+              <p>以 AI 辅助开发的互动小游戏方向，展示创意实现和快速构建能力。</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" aria-labelledby="skills-title">
+      <div class="section-head">
+        <div>
+          <h2 id="skills-title">技能特长</h2>
+        </div>
+      </div>
+      <div class="skills-grid">
+        <article class="skill-card">
+          <h3>专业技能</h3>
+          <ul>
+            <li>技术 SEO 与索引优化</li>
+            <li>生成式引擎优化（GEO）</li>
+            <li>AI 自动搜索关键词搭建</li>
+            <li>AI 辅助 SEO 工具开发</li>
+            <li>爬取、索引与日志分析</li>
+            <li>GEO 内容规划</li>
+          </ul>
+        </article>
+        <article class="skill-card">
+          <h3>增长与产品</h3>
+          <ul>
+            <li>SEO 产品管理</li>
+            <li>多语言国际化 SEO</li>
+            <li>外链建设与权威度提升</li>
+            <li>Vibe Coding</li>
+            <li>关键词研究与竞品分析</li>
+            <li>内容大纲计划</li>
+          </ul>
+        </article>
+        <article class="skill-card">
+          <h3>工具掌握</h3>
+          <div class="skill-tags" aria-label="工具列表">
+            <span class="tag">Google Search Console</span>
+            <span class="tag">Semrush</span>
+            <span class="tag">Ahrefs</span>
+            <span class="tag">Screaming Frog</span>
+            <span class="tag">Google Analytics</span>
+            <span class="tag">Python</span>
+            <span class="tag">AI Automation</span>
+            <span class="tag">Google AI Studio</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="education" aria-labelledby="education-title">
+      <div class="section-head">
+        <div>
+          <span class="section-kicker">Education & Languages</span>
+          <h2 id="education-title">教育背景</h2>
+        </div>
+      </div>
+      <div class="edu-wrap">
+        <article class="edu-card featured">
+          <h3>拉曼大学（UTAR）</h3>
+          <ul>
+            <li>社会科学（荣誉）学士</li>
+            <li>主修心理学</li>
+            <li>2013年5月 - 2016年10月</li>
+            <li>马来西亚</li>
+          </ul>
+        </article>
+        <article class="edu-card">
+          <h3>语言能力</h3>
+          <div class="language-tags">
+            <span class="tag language-tag">
+              <span>中文（简 / 繁体）</span>
+              <span class="language-stars" aria-label="5 星（满分 5 星）"><span class="filled">★★★★★</span></span>
+            </span>
+            <span class="tag language-tag">
+              <span>英语</span>
+              <span class="language-stars" aria-label="4 星（满分 5 星）"><span class="filled">★★★★</span><span class="empty">☆</span></span>
+            </span>
+            <span class="tag language-tag">
+              <span>粤语</span>
+              <span class="language-stars" aria-label="4 星（满分 5 星）"><span class="filled">★★★★</span><span class="empty">☆</span></span>
+            </span>
+            <span class="tag language-tag">
+              <span>马来语</span>
+              <span class="language-stars" aria-label="3 星（满分 5 星）"><span class="filled">★★★</span><span class="empty">☆☆</span></span>
+            </span>
+            <span class="tag language-tag">
+              <span>韩语</span>
+              <span class="language-stars" aria-label="1 星（满分 5 星）"><span class="filled">★</span><span class="empty">☆☆☆☆</span></span>
+            </span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-title">
+      <div class="contact-panel">
+        <div>
+          <span class="section-kicker">Contact</span>
+          <h2 id="contact-title">让搜索增长更聪明一点。</h2>
+          <p>
+            如果你正在寻找能同时理解 SEO、产品、工程、AI 搜索与内容结构的人，可以通过电话或邮件联系我。
+          </p>
+          <div class="contact-actions">
+            <a class="button" href="https://t.me/gabelolabuden">
+              <span class="brand-icon" aria-hidden="true">
+                <svg viewBox="0 0 32 32" role="img">
+                  <circle cx="16" cy="16" r="16" fill="#229ED9" />
+                  <path fill="#fff" d="M24.8 8.2 21.9 23c-.2 1-1 1.2-1.8.7l-4.5-3.3-2.2 2.1c-.2.2-.4.4-.8.4l.3-4.6 8.4-7.6c.4-.3-.1-.5-.6-.2l-10.4 6.6-4.5-1.4c-1-.3-1-1 .2-1.5l17.5-6.7c.8-.3 1.5.2 1.3.7Z" />
+                </svg>
+              </span>
+              <span>Telegram @gabelolabuden</span>
+            </a>
+            <a class="button secondary" href="https://wa.me/60165680798">
+              <span class="brand-icon" aria-hidden="true">
+                <svg viewBox="0 0 32 32" role="img">
+                  <circle cx="16" cy="16" r="16" fill="#25D366" />
+                  <path fill="#fff" d="M23.3 8.8A10.2 10.2 0 0 0 7.2 21.1L5.8 26l5-1.3A10.2 10.2 0 0 0 23.3 8.8Zm-7.2 14.6c-1.6 0-3.2-.4-4.6-1.3l-.3-.2-2.9.8.8-2.8-.2-.3a7.9 7.9 0 1 1 7.2 3.8Zm4.3-5.9c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.6.2-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-1.5-.7-2.5-1.4-3.5-3.1-.3-.5.3-.5.7-1.6.1-.2 0-.4 0-.5l-.8-2c-.2-.5-.5-.4-.7-.4H12c-.3 0-.7.1-1 .5-.3.4-1.3 1.3-1.3 3.1s1.3 3.6 1.5 3.8c.2.3 2.6 4 6.4 5.6 2.4 1 3.3 1.1 4.5.9.7-.1 2.2-.9 2.5-1.8.3-.9.3-1.7.2-1.8-.1-.2-.2-.2-.4-.3Z" />
+                </svg>
+              </span>
+              <span>WhatsApp</span>
+            </a>
+          </div>
+        </div>
+        <div class="contact-list" aria-label="联系方式">
+          <a class="contact-item" href="tel:+60165680798">
+            <span class="contact-icon" aria-hidden="true">☎</span>
+            <span>+6016 5680798</span>
+          </a>
+          <a class="contact-item" href="mailto:Gabeyenwai222@gmail.com">
+            <span class="contact-icon" aria-hidden="true">@</span>
+            <span>Gabeyenwai222@gmail.com</span>
+          </a>
+          <div class="contact-item">
+            <span class="contact-icon" aria-hidden="true">⌂</span>
+            <span>吉隆坡，马来西亚</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© 2026 Gabe Ng Yen Wai</span>
+    <span>SEO Manager · GEO Specialist · AI Search Growth</span>
+  </footer>
+
+  <div class="image-lightbox" id="gameLightbox" role="dialog" aria-modal="true" aria-label="游戏项目截图预览" hidden>
+    <button class="lightbox-close" id="lightboxClose" type="button" aria-label="关闭图片预览">×</button>
+    <img src="game.png" alt="AI 手搓小游戏项目截图放大预览">
+  </div>
+
+  <script>
+    // 中英双语：以原始中文文本为基准，切换所有可见内容与辅助标签。
+    const englishTranslations = {
+      "跳到主要内容": "Skip to main content",
+      "主导航": "Main navigation",
+      "返回首页": "Back to home",
+      "关于我": "About",
+      "工作经历": "Experience",
+      "核心项目": "Projects",
+      "技能": "Skills",
+      "教育背景": "Education",
+      "联系": "Contact",
+      "语言切换": "Language switch",
+      "Hi, 我是": "Hi, I'm",
+      "4年以上跨行业 SEO 经验，专注加密货币与 Web3 领域；擅长把技术 SEO、产品需求、AI Automation 与 GEO 内容架构串联，提升内容抓取、流量点击以及转化率。": "4+ years of cross-industry SEO experience, specializing in crypto and Web3. I connect technical SEO, product requirements, AI automation and GEO content architecture to improve crawling, traffic, clicks and conversions.",
+      "查看核心项目": "View Projects",
+      "联系我": "Contact Me",
+      "核心成果": "Key results",
+      "加密全站自然流量点击提升": "Crypto site-wide organic clicks growth",
+      "内容页面索引速度提效": "Faster content page indexing",
+      "AI LLM Mention 提升": "Growth in AI and LLM mentions",
+      "个人照片": "Profile photo",
+      "Gabe Ng Yen Wai 个人照片": "Portrait of Gabe Ng Yen Wai",
+      "吉隆坡，马来西亚": "Kuala Lumpur, Malaysia",
+      "我拥有超过4年跨行业 SEO 经验，专注于加密货币与 Web3 领域，成功服务 Phemex、Gate.io 等国际加密平台。擅长技术 SEO 全链路策略制定与落地，覆盖索引管理、爬取效率优化、JavaScript 渲染及 URL 架构设计。": "I bring over four years of cross-industry SEO experience with a focus on crypto and Web3, supporting global platforms including Phemex and Gate.io. My end-to-end technical SEO work covers index management, crawl efficiency, JavaScript rendering and URL architecture.",
+      "近年持续布局生成式引擎优化（GEO），通过 LLM 可见度提升、AI 内容结构优化、Vibe Coding 与 AI Automation，提升关键词研究、内容生产、技术审计与报告效率。": "More recently, I have focused on Generative Engine Optimization (GEO), improving LLM visibility, AI-ready content structures, keyword research, content production, technical audits and reporting through Vibe Coding and AI automation.",
+      "SEO 不只是排名，而是让产品在搜索、AI 答案与用户意图之间被正确理解。": "SEO is not only about rankings. It helps products be understood across search, AI answers and user intent.",
+      "适合高速增长型国际团队，具备 Web3、AI 搜索与多语言市场经验。": "Built for fast-growing international teams across Web3, AI search and multilingual markets.",
+      "2025年5月 - 至今": "May 2025 - Present",
+      "Phemex · 新加坡": "Phemex · Singapore",
+      "SEO 经理": "SEO Manager",
+      "全面负责大型加密平台端到端技术 SEO 策略，覆盖索引管理、爬取效率优化、JavaScript 渲染及 URL 架构设计，自然流量点击提升300%。": "Lead end-to-end technical SEO for a major crypto platform, covering index management, crawl efficiency, JavaScript rendering and URL architecture, increasing organic clicks by 300%.",
+      "深度参与产品与工程团队新功能研发，在产品立项阶段嵌入 SEO 需求，确保新产品上线即符合用户搜索意图与市场需求。": "Partner with product and engineering teams on new features, embedding SEO requirements at planning stage so launches align with search intent and market demand.",
+      "执行生成式引擎优化（GEO）项目，从内容结构与技术实现双维度推进 LLM 可见度提升，增强品牌在 AI 搜索平台中的引用潜力。": "Deliver GEO initiatives across content structure and technical implementation to improve LLM visibility and increase brand citation potential in AI search.",
+      "运用 AI Automation 与 Vibe Coding 规划落地自动化工具，提升 SEO 工作流程、关键词研究及 AI 内容生产效率。": "Plan and build automation tools with AI Automation and Vibe Coding to improve SEO workflows, keyword research and AI-assisted content production.",
+      "2024年9月 - 2025年3月": "Sep 2024 - Mar 2025",
+      "Gate.io · 香港": "Gate.io · Hong Kong",
+      "执行大规模 SEO 优化项目，包含多语言本地化优化，提升多元市场的搜索可见度与用户体验。": "Delivered large-scale SEO and multilingual localization programs to improve search visibility and user experience across markets.",
+      "执行系统性技术 SEO 审计，识别并修复网站问题，确保合规各地区法律法规要求，同步提升网站整体性能表现。": "Ran systematic technical SEO audits, resolving site issues while supporting regional compliance and overall website performance.",
+      "与设计师、开发人员及产品团队协作，将 SEO 最佳实践融入网站架构、产品功能及业务 OKR。": "Worked with design, engineering and product teams to embed SEO best practices into site architecture, product features and business OKRs.",
+      "管理专属外链建设团队，制定并执行战略性链接推广方案，提升域名权威度并改善自然搜索排名。": "Managed a dedicated link-building team and strategic outreach programs to strengthen domain authority and organic rankings.",
+      "2023年1月 - 2024年9月": "Jan 2023 - Sep 2024",
+      "Aloha Group · 香港": "Aloha Group · Hong Kong",
+      "SEO 专员": "SEO Specialist",
+      "执行技术、页面内与页面外全维度综合 SEO 审计，识别改进机会并制定优化方案。": "Conducted comprehensive technical, on-page and off-page SEO audits to identify opportunities and define optimization plans.",
+      "综合运用 Google Search Console、Semrush、Screaming Frog 等工具采集与分析 SEO 数据，支撑决策制定。": "Used Google Search Console, Semrush and Screaming Frog to collect and analyze SEO data for decision-making.",
+      "落地 SEO 策略后，3个月内实现搜索流量增长与关键词排名提升超25%。": "Delivered more than 25% growth in search traffic and keyword rankings within three months of implementation.",
+      "定期执行关键词研究与竞品分析，为博客内容开发提供完整内容大纲计划。": "Performed recurring keyword and competitor research and created complete content briefs for blog production.",
+      "2021年12月 - 2022年12月": "Dec 2021 - Dec 2022",
+      "The Sidekick · 马来西亚": "The Sidekick · Malaysia",
+      "分析并优化客户网站，为详尽 SEO 策略报告的输出做准备。": "Analyzed and optimized client websites to support detailed SEO strategy reporting.",
+      "通过深度关键词研究与精准识别，将自然搜索结果点击率（CTR）提升30%。": "Improved organic search click-through rate by 30% through in-depth keyword research and precise opportunity identification.",
+      "管理并审计逾30个多元行业客户项目，涵盖电子商务、人力资源、保险及金融服务领域。": "Managed and audited more than 30 client projects across ecommerce, HR, insurance and financial services.",
+      "2021年10月 - 2021年12月": "Oct 2021 - Dec 2021",
+      "Nexmind Ai Sdn Bhd · 马来西亚": "Nexmind Ai Sdn Bhd · Malaysia",
+      "搜索引擎优化助理": "SEO Assistant",
+      "协助执行网站 SEO 基础设置、关键词整理与页面优化，支持客户项目报告产出。": "Supported foundational SEO setup, keyword organization, page optimization and client reporting.",
+      "配合团队检查网站结构、标题标签、元描述与内容相关性，提升搜索表现基础质量。": "Reviewed site structure, title tags, meta descriptions and content relevance with the team to improve search fundamentals.",
+      "2018年9月 - 2021年9月": "Sep 2018 - Sep 2021",
+      "Public Mutual Berhad · 马来西亚": "Public Mutual Berhad · Malaysia",
+      "业务发展主任（培训师）": "Business Development Executive (Trainer)",
+      "协助分行经理推进分支机构业务发展，统筹分行运营，执行销售及招募活动方案。": "Supported branch business development and operations while executing sales and recruitment programs.",
+      "为逾1,400名代理人提供软技能与产品培训及后台支持，提升团队专业素质。": "Delivered soft-skills and product training plus operational support to more than 1,400 agents.",
+      "2017年3月 - 2018年8月": "Mar 2017 - Aug 2018",
+      "Unisem Berhad · 马来西亚": "Unisem Berhad · Malaysia",
+      "计划主任": "Planning Executive",
+      "与生产及工程团队协作，解决物料问题并根据生产优先级灵活调整排程。": "Worked with production and engineering teams to resolve material issues and adapt schedules to production priorities.",
+      "依据销售预测与产能规划，制定主生产计划（MPS），保障供应链顺畅运转。": "Built the master production schedule (MPS) from sales forecasts and capacity planning to keep the supply chain running smoothly.",
+      "MCP 自动化连接 TG/飞书": "MCP Automation for Telegram / Feishu",
+      "自动任务，利用 MCP 连接日志以及数据平台，每日自动推送实时数据以及监控异常。": "Automated MCP workflows connect logs and data platforms to push real-time daily metrics and monitor anomalies.",
+      "Python Indexing 工具": "Python Indexing Tool",
+      "利用 Google Indexing API 搭建索引管理与提效工具，提升 70% 内容页面索引率。": "Built an index management tool with the Google Indexing API, improving content-page indexation by 70%.",
+      "AI 关键词搭建": "AI Keyword Architecture",
+      "用 AI Automation 构建搜索关键词体系，辅助内容生产流程。": "Built a scalable search keyword system with AI automation to support content production.",
+      "SEO 实战流量增长": "SEO Traffic Growth",
+      "加密交易所日均自然流量提升 300%，最高点达到 500% 提升。": "Increased daily organic traffic for a crypto exchange by 300%, reaching a peak uplift of 500%.",
+      "GEO 优化": "GEO Optimization",
+      "推进生成式引擎优化项目，提升品牌在 AI 搜索平台中的引用潜力。": "Advanced Generative Engine Optimization initiatives to increase the brand's citation potential across AI search platforms.",
+      "LLM 内容架构优化": "LLM Content Architecture",
+      "优化 LLM 偏好内容结构与关键词规划框架，提升信息架构对齐度。": "Optimized LLM-friendly content structures and keyword frameworks to improve information architecture alignment.",
+      "Vibe Coding 页面": "Vibe Coding Pages",
+      "通过 Vibe Coding 建立关键词数据库，提效内容生产选题速度。": "Built a keyword database through Vibe Coding to accelerate content ideation and topic selection.",
+      "AI 手搓小游戏（个人爱好）": "AI-Built Mini Game (Personal Project)",
+      "放大游戏项目截图": "Enlarge game project screenshot",
+      "AI 手搓小游戏项目截图": "AI-built mini game screenshot",
+      "以 AI 辅助开发的互动小游戏方向，展示创意实现和快速构建能力。": "An AI-assisted interactive mini game demonstrating creative execution and rapid prototyping.",
+      "技能特长": "Skills",
+      "专业技能": "Professional Skills",
+      "技术 SEO 与索引优化": "Technical SEO and Indexation",
+      "生成式引擎优化（GEO）": "Generative Engine Optimization (GEO)",
+      "AI 自动搜索关键词搭建": "AI-Automated Keyword Architecture",
+      "AI 辅助 SEO 工具开发": "AI-Assisted SEO Tool Development",
+      "爬取、索引与日志分析": "Crawling, Indexation and Log Analysis",
+      "GEO 内容规划": "GEO Content Planning",
+      "增长与产品": "Growth and Product",
+      "SEO 产品管理": "SEO Product Management",
+      "多语言国际化 SEO": "Multilingual International SEO",
+      "外链建设与权威度提升": "Link Building and Authority Growth",
+      "关键词研究与竞品分析": "Keyword and Competitor Research",
+      "内容大纲计划": "Content Brief Planning",
+      "工具掌握": "Tools",
+      "工具列表": "Tool list",
+      "拉曼大学（UTAR）": "Universiti Tunku Abdul Rahman (UTAR)",
+      "社会科学（荣誉）学士": "Bachelor of Social Science (Honours)",
+      "主修心理学": "Major in Psychology",
+      "2013年5月 - 2016年10月": "May 2013 - Oct 2016",
+      "马来西亚": "Malaysia",
+      "语言能力": "Languages",
+      "中文（简 / 繁体）": "Chinese (Simplified / Traditional)",
+      "5 星（满分 5 星）": "5 out of 5 stars",
+      "英语": "English",
+      "4 星（满分 5 星）": "4 out of 5 stars",
+      "粤语": "Cantonese",
+      "马来语": "Malay",
+      "3 星（满分 5 星）": "3 out of 5 stars",
+      "韩语": "Korean",
+      "1 星（满分 5 星）": "1 out of 5 stars",
+      "让搜索增长更聪明一点。": "Make Search Growth Smarter.",
+      "如果你正在寻找能同时理解 SEO、产品、工程、AI 搜索与内容结构的人，可以通过电话或邮件联系我。": "Looking for someone who understands SEO, product, engineering, AI search and content architecture? Reach me on Telegram or WhatsApp.",
+      "联系方式": "Contact details",
+      "游戏项目截图预览": "Game project screenshot preview",
+      "关闭图片预览": "Close image preview",
+      "AI 手搓小游戏项目截图放大预览": "Expanded preview of the AI-built mini game"
+    };
+
+    const translationTextNodes = [];
+    document.querySelectorAll("body *").forEach((element) => {
+      if (element.tagName === "SCRIPT" || element.tagName === "STYLE") return;
+      element.childNodes.forEach((node) => {
+        if (node.nodeType !== 3) return;
+        const chinese = node.nodeValue.trim();
+        const english = englishTranslations[chinese];
+        if (!english) return;
+        const leading = node.nodeValue.match(/^\s*/)?.[0] || "";
+        const trailing = node.nodeValue.match(/\s*$/)?.[0] || "";
+        translationTextNodes.push({ node, chinese, english, leading, trailing });
+      });
+    });
+
+    const translationAttributes = [];
+    document.querySelectorAll("[aria-label], [alt]").forEach((element) => {
+      ["aria-label", "alt"].forEach((attribute) => {
+        const chinese = element.getAttribute(attribute);
+        const english = englishTranslations[chinese];
+        if (english) translationAttributes.push({ element, attribute, chinese, english });
+      });
+    });
+
+    const languageButtons = [...document.querySelectorAll("[data-language]")];
+    const metaDescription = document.querySelector('meta[name="description"]');
+    const chineseMetaDescription = metaDescription?.content || "";
+    const englishMetaDescription = "Gabe Ng Yen Wai is an SEO Manager and GEO Specialist focused on technical SEO, generative engine optimization, AI automation, Web3 and multilingual international SEO.";
+
+    function setPageLanguage(language) {
+      const useEnglish = language === "en";
+      translationTextNodes.forEach(({ node, chinese, english, leading, trailing }) => {
+        node.nodeValue = `${leading}${useEnglish ? english : chinese}${trailing}`;
+      });
+      translationAttributes.forEach(({ element, attribute, chinese, english }) => {
+        element.setAttribute(attribute, useEnglish ? english : chinese);
+      });
+      languageButtons.forEach((button) => {
+        const active = button.dataset.language === language;
+        button.classList.toggle("active", active);
+        button.setAttribute("aria-pressed", String(active));
+      });
+      document.documentElement.lang = useEnglish ? "en" : "zh-CN";
+      if (metaDescription) metaDescription.content = useEnglish ? englishMetaDescription : chineseMetaDescription;
+      try {
+        localStorage.setItem("gabe-language", language);
+      } catch (error) {
+        // The language still switches when storage is unavailable.
+      }
+    }
+
+    languageButtons.forEach((button) => {
+      button.addEventListener("click", () => setPageLanguage(button.dataset.language));
+    });
+
+    let savedLanguage = "zh";
+    try {
+      savedLanguage = localStorage.getItem("gabe-language") || "zh";
+    } catch (error) {
+      savedLanguage = "zh";
+    }
+    setPageLanguage(savedLanguage === "en" ? "en" : "zh");
+
+    // 头像优先级探测：优先使用个人指定照片，其余格式作为同目录备用。
+    const avatarCandidates = ["profile.jpg", "avatar.png", "avatar.jpg", "avatar.jpeg"];
+    const avatarImage = document.getElementById("avatarImage");
+    const avatarShell = document.getElementById("avatarShell");
+
+    function probeAvatar(candidates, index = 0) {
+      if (!avatarImage || !avatarShell || index >= candidates.length) return;
+
+      const testImage = new Image();
+      testImage.onload = () => {
+        avatarImage.src = candidates[index];
+        avatarImage.classList.add("is-loaded");
+        avatarShell.classList.add("has-image");
+      };
+      testImage.onerror = () => probeAvatar(candidates, index + 1);
+      testImage.src = candidates[index];
+    }
+
+    probeAvatar(avatarCandidates);
+
+    // 游戏项目截图：同目录存在 game.png 时替换备用游戏图案。
+    const gameImage = document.getElementById("gameImage");
+    const gameFallback = document.getElementById("gameFallback");
+    const gameZoomButton = document.getElementById("gameZoomButton");
+
+    if (gameImage && gameFallback) {
+      const gameProbe = new Image();
+      gameProbe.onload = () => {
+        gameImage.src = "game.png";
+        gameZoomButton.hidden = false;
+        gameFallback.setAttribute("hidden", "");
+      };
+      gameProbe.src = "game.png";
+    }
+
+    // 绳索卡片轨道：支持鼠标与触控横向拖动，并保留点击、悬停与键盘翻转。
+    const projectTrack = document.querySelector(".projects-grid");
+
+    if (projectTrack) {
+      let pointerActive = false;
+      let dragStarted = false;
+      let startX = 0;
+      let startScrollLeft = 0;
+      let ignoreClickUntil = 0;
+
+      projectTrack.addEventListener("pointerdown", (event) => {
+        if (event.button !== 0) return;
+        pointerActive = true;
+        dragStarted = false;
+        startX = event.clientX;
+        startScrollLeft = projectTrack.scrollLeft;
+        projectTrack.setPointerCapture(event.pointerId);
+      });
+
+      projectTrack.addEventListener("pointermove", (event) => {
+        if (!pointerActive) return;
+        const distance = event.clientX - startX;
+
+        if (!dragStarted && Math.abs(distance) > 5) {
+          dragStarted = true;
+          projectTrack.classList.add("is-dragging");
+          if (document.activeElement instanceof HTMLElement) document.activeElement.blur();
+        }
+
+        if (dragStarted) projectTrack.scrollLeft = startScrollLeft - distance;
+      });
+
+      const finishProjectDrag = (event) => {
+        if (!pointerActive) return;
+        pointerActive = false;
+        if (projectTrack.hasPointerCapture(event.pointerId)) {
+          projectTrack.releasePointerCapture(event.pointerId);
+        }
+        if (dragStarted) ignoreClickUntil = Date.now() + 250;
+        dragStarted = false;
+        projectTrack.classList.remove("is-dragging");
+      };
+
+      projectTrack.addEventListener("pointerup", finishProjectDrag);
+      projectTrack.addEventListener("pointercancel", finishProjectDrag);
+
+      projectTrack.addEventListener("click", (event) => {
+        if (Date.now() < ignoreClickUntil) {
+          event.preventDefault();
+          event.stopPropagation();
+          return;
+        }
+
+        if (event.target.closest(".game-zoom")) {
+          gameLightbox.hidden = false;
+          document.body.style.overflow = "hidden";
+          lightboxClose?.focus();
+          return;
+        }
+        const card = event.target.closest(".flip-card");
+        if (!card) return;
+        const shouldFlip = !card.classList.contains("is-flipped");
+        projectTrack.querySelectorAll(".flip-card.is-flipped").forEach((item) => {
+          item.classList.remove("is-flipped");
+        });
+        card.classList.toggle("is-flipped", shouldFlip);
+        if (!shouldFlip) card.blur();
+      });
+
+      projectTrack.querySelectorAll(".flip-card").forEach((card) => {
+        card.addEventListener("keydown", (event) => {
+          if (event.key !== "Enter" && event.key !== " ") return;
+          event.preventDefault();
+          card.classList.toggle("is-flipped");
+        });
+      });
+
+      document.addEventListener("pointermove", (event) => {
+        if (event.pointerType !== "mouse") return;
+        projectTrack.querySelectorAll(".flip-card.is-flipped").forEach((card) => {
+          if (card.contains(event.target)) return;
+          card.classList.remove("is-flipped");
+          card.blur();
+        });
+      });
+    }
+
+    // 游戏截图灯箱：点击图片放大，点击背景、关闭按钮或按 Esc 返回。
+    const gameLightbox = document.getElementById("gameLightbox");
+    const lightboxClose = document.getElementById("lightboxClose");
+
+    function closeGameLightbox() {
+      if (!gameLightbox || gameLightbox.hidden) return;
+      gameLightbox.hidden = true;
+      document.body.style.overflow = "";
+      gameZoomButton?.focus();
+    }
+
+    lightboxClose?.addEventListener("click", closeGameLightbox);
+    gameLightbox?.addEventListener("click", (event) => {
+      if (event.target === gameLightbox) closeGameLightbox();
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeGameLightbox();
+    });
+
+    // TextType 同款动效：循环打字、暂停、删除，并保留闪烁光标。
+    function initTextType(element) {
+      if (!element) return;
+
+      const texts = JSON.parse(element.dataset.textType || "[]");
+      const typingSpeed = Number(element.dataset.typingSpeed || 75);
+      const deletingSpeed = Number(element.dataset.deletingSpeed || 34);
+      const pauseDuration = Number(element.dataset.pauseDuration || 1500);
+      const cursorCharacter = element.dataset.cursorCharacter || "|";
+      const content = document.createElement("span");
+      const cursor = document.createElement("span");
+      const longestText = texts.reduce((longest, item) => item.length > longest.length ? item : longest, "");
+
+      let textIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+
+      content.className = "text-type__content";
+      cursor.className = "text-type__cursor";
+      cursor.textContent = cursorCharacter;
+      element.style.setProperty("--text-type-width", `${longestText.length + 1}ch`);
+      element.append(content, cursor);
+
+      function tick() {
+        const currentText = texts[textIndex] || "";
+        content.textContent = currentText.slice(0, charIndex);
+
+        if (!isDeleting && charIndex < currentText.length) {
+          charIndex += 1;
+          window.setTimeout(tick, typingSpeed);
+          return;
+        }
+
+        if (!isDeleting && charIndex === currentText.length) {
+          window.setTimeout(() => {
+            isDeleting = true;
+            tick();
+          }, pauseDuration);
+          return;
+        }
+
+        if (isDeleting && charIndex > 0) {
+          charIndex -= 1;
+          window.setTimeout(tick, deletingSpeed);
+          return;
+        }
+
+        isDeleting = false;
+        textIndex = (textIndex + 1) % texts.length;
+        window.setTimeout(tick, typingSpeed);
+      }
+
+      tick();
+    }
+
+    initTextType(document.querySelector("[data-text-type]"));
+
+    // 导航激活态：滚动到不同栏目时同步顶部导航，增强单页长滚动的方向感。
+    const navLinks = [...document.querySelectorAll("#navLinks a")];
+    const sections = navLinks
+      .map((link) => document.querySelector(link.getAttribute("href")))
+      .filter(Boolean);
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        navLinks.forEach((link) => {
+          link.classList.toggle("active", link.getAttribute("href") === `#${entry.target.id}`);
+        });
+      });
+    }, {
+      rootMargin: "-40% 0px -48% 0px",
+      threshold: 0
+    });
+
+    sections.forEach((section) => observer.observe(section));
+  </script>
+</body>
+</html>
